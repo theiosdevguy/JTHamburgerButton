@@ -306,6 +306,12 @@
 
 - (void)transformFromHamburgerToArrow:(CGFloat)duration
 {
+    [UIView animateWithDuration:duration animations:^{
+        topLayer.strokeColor = _lineTransitionColor.CGColor;
+        middleLayer.strokeColor = _lineTransitionColor.CGColor;
+        bottomLayer.strokeColor = _lineTransitionColor.CGColor;
+    }];
+    
     {
         CAKeyframeAnimation *animation = [self createKeyFrameAnimation:duration];
         animation.values = [self hamburgerToArrowValuesTopLayer];
@@ -327,6 +333,12 @@
 
 - (void)transformFromHamburgerToCross:(CGFloat)duration
 {
+    [UIView animateWithDuration:duration animations:^{
+        topLayer.strokeColor = _lineTransitionColor.CGColor;
+        middleLayer.strokeColor = _lineTransitionColor.CGColor;
+        bottomLayer.strokeColor = _lineTransitionColor.CGColor;
+    }];
+    
     {
         CAKeyframeAnimation *animation = [self createKeyFrameAnimation:duration];
         animation.values = [self hamburgerToCrossValuesTopLayer];
@@ -348,6 +360,12 @@
 
 - (void)transformFromArrowToHamburger:(CGFloat)duration
 {
+    [UIView animateWithDuration:duration animations:^{
+        topLayer.strokeColor = _lineColor.CGColor;
+        middleLayer.strokeColor = _lineColor.CGColor;
+        bottomLayer.strokeColor = _lineColor.CGColor;
+    }];
+    
     {
         CAKeyframeAnimation *animation = [self createKeyFrameAnimation:duration];
         animation.values = [self reverseValues:[self hamburgerToArrowValuesTopLayer]];
@@ -369,6 +387,12 @@
 
 - (void)transformFromArrowToCross:(CGFloat)duration
 {
+    [UIView animateWithDuration:duration animations:^{
+        topLayer.strokeColor = _lineColor.CGColor;
+        middleLayer.strokeColor = _lineColor.CGColor;
+        bottomLayer.strokeColor = _lineColor.CGColor;
+    }];
+    
     {
         CAKeyframeAnimation *animation = [self createKeyFrameAnimation:duration];
         animation.values = [self arrowToCrossValuesTopLayer];
@@ -390,6 +414,12 @@
 
 - (void)transformFromCrossToHamburger:(CGFloat)duration
 {
+    [UIView animateWithDuration:duration animations:^{
+        topLayer.strokeColor = _lineColor.CGColor;
+        middleLayer.strokeColor = _lineColor.CGColor;
+        bottomLayer.strokeColor = _lineColor.CGColor;
+    }];
+    
     {
         CAKeyframeAnimation *animation = [self createKeyFrameAnimation:duration];
         animation.values = [self reverseValues:[self hamburgerToCrossValuesTopLayer]];

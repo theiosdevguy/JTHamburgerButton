@@ -19,6 +19,7 @@ typedef NS_ENUM(NSInteger, JTHamburgerButtonMode) {
 @property (nonatomic) CGFloat lineWidth;
 @property (nonatomic) CGFloat lineSpacing;
 @property (nonatomic) UIColor *lineColor;
+@property (nonatomic) UIColor *lineTransitionColor;
 
 @property (nonatomic) CGFloat animationDuration;
 
